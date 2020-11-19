@@ -1,0 +1,24 @@
+<h1>Plantilla</h1>
+
+<div *ngIf="plantilla.length > 0">
+    <table>
+        <thead>
+            <tr>
+                <th>Id Empleado</th>
+                <th>Apellido</th>
+                <th>Función</th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of plantilla">
+                <td>{{p.idEmpleado}}</td>
+                <td>{{p.apellido}}</td>
+                <td>{{p.funcion}}</td>
+                <td><a [routerLink]="['/detalles',p.idEmpleado]">Detalles</a></td>
+                <td><a [routerLink]="['/update']">Modificar</a></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

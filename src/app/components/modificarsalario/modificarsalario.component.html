@@ -1,0 +1,10 @@
+<h1>Modificar:</h1>
+<form #updateForm="ngForm">
+    <select #selectFuncion name="selectFuncion">
+        <option *ngFor="let f of funciones">{{f}}</option>
+    </select>
+    <br/>
+    <input type="number" #cajaIncremento name="cajaIncremento"/>
+    <br/>
+    <button (click)="updateSalario()">Modificar</button>
+</form>
